@@ -1,4 +1,4 @@
-import 'package:riifruit/menu.dart';
+import 'package:riifruit/screens/menu.dart';
 import 'package:flutter/material.dart';
 
 void main() {

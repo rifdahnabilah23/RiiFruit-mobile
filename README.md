@@ -240,3 +240,181 @@ Jawaban:
 
 
 
+------ TUGAS 8 ------
+
+1. Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+
+Jawaban:
+
+Navigator.push()
+
+- Menampilkan halaman baru dengan cara menambahkannya ke paling atas stack. Pengguna dapat kembali ke halaman sebelumnya. Contoh penggunaan:
+Navigator.push(context, MaterialPageRoute(builder: (context) => PageName()))
+
+Navigator.pushReplacement()
+
+- Menampilkan halaman baru dengan cara menggantikan halaman yang berada di posisi paling atas stack dengan halaman baru tersebut. Akibatnya pengguna tidak dapat kebali ke halaman sebelumnya dengan mudah. Contoh penggunaan:
+Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PageName()))
+
+2. Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+
+Jawaban:
+
+1. Row
+
+  - Mengatur elemen secara horizontal dari kiri ke kanan
+  - Penggunaan: penataan tombol dan judul pada navigasi dalam baris
+
+2. Column
+
+  - Mengatur elemen secara vertikal dari atas ke bawah
+  - Penggunaan: menata daftar item pada formulir
+
+3. Center
+
+  - Meletakkan elemen di tengah
+  - Penggunaan: meletakkan elemen di tengah layar
+
+4. Container
+
+  - Sebagai wadah untuk mengatur tata letak dan gaya elemen pada aplikasi seperti padding, margin, borders, dan color
+  - Penggunaan: memberi padding, margin, border, dan color pada elemen
+
+5. ListView
+
+  - Membuat daftar yang dapat discroll
+  - Penggunaan: daftar item yang sangat panjang
+
+6. Stack
+
+  - Menumpuk elemen-elemen di atas satu sama lain
+  - Penggunaan: ketika ingin menumpuk gambar, icon, dan teks di satu tumpukan
+
+7. Expanded
+
+  - Digunakan di dalam Row atau Column untuk mengatur bagian yang mengisi sisi ruang yang tersedia
+  - Penggunaan: ketika ingin membagi ruang yang tersedia secara proporsional antara beberapa elemen
+
+8. Sizedbox
+
+  - Menentukan ukuran lebar dan tinggi dari sebuah widget
+  - Penggunaan: mengatur ruang kosong atau mengontrol ukuran elemen dalam tata letak Anda
+
+9. Card
+
+  - Untuk mengelilingi elemen-elemen seperti gambar, teks, atau tombol untuk membuat tampilan kartu
+  - Penggunaan: sering digunakan dalam daftar item atau dalam konteks informasi yang terkandung dalam satu blok visual
+
+10. GridView
+
+  - Menampilkan elemen dalam tata letak berbentuk grid atau tabel. Kita dapat megnatur jumlah kolom, menggulir elemen-elemen dalam grid, dan mengontrol tampilan yang berbeda untuk setiap elemen
+  - Pengunaan: ketika ingin menampilakn elemen dalam bentuk tabel
+
+11. Wrap
+
+  - Mengatur elemen-elemen dalam baris atau kolom yang berjajar tetapi elemen-elemen tersebut tidak muat dalam baris atau kolom tersebut, sehingga mereka melanjutkan ke baris atau kolom berikutnya
+  - Penggunaan: menata elemen yang ingin dilanjutkan ke baris atau kolom berikutnya
+
+12. Align
+
+  - Mengatur posisi align dari child terhadap elemen parentnya.
+  - Penggunaan: ketika ingin meletakkan tombol di pojok kanan bawah layar
+
+13. AspectRatio
+
+  - Mengatur ukuran suatu elemen berdasarkan aspect ratio tertentu
+  - Penggunaan: mengatur aspect ratio dari elemen sehingga tidak berubah meskipun menggunakan device yang berbeda
+
+14. Baseline
+
+  - Mengatur posisi suatu elemen sehingga baseline/garis dasarnya sejajar
+  - Pengunaan: ketika ingin memposisikan elemen terhadap garis dasarnya
+
+15. Constrainedbox
+
+  - Mengatur batasan lebar dan tinggi minimum dan maksimum untuk elemen-elemen anaknya.
+  - Penggunaan: untuk mengontrol ukuran dari elemen secara detail
+
+16. Padding
+
+  - Menambahkan jarak (padding) di sekeliling anaknya
+  - Penggunaan: mengatur ruang antara elemen-elemen dalam tata letak
+
+17. Transform
+
+  - Mentransformasikan atau mengubah elemen-elemen anaknya seperti menggeser, memutar, atau mengubah ukuran mereka.
+  - Penggunaan: membuat efek visual atau animasi
+
+3. Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+
+Jawaban:
+
+Saya menggunakan TextFormField untuk menerima input nama item, stok, harga, dan deskripsi. Saya menggunakan ini karena cocok untuk digunakan untuk mengumpulkan input-input dalam bentuk teks
+
+4. Bagaimana penerapan clean architecture pada aplikasi Flutter?
+
+Jawaban:
+
+Clean Architecture adalah sebuah konsep pengembangan perangkat lunak yang bertujuan untuk memisahkan komponen-komponen dalam sebuah aplikasi menjadi lapisan-lapisan yang independen dan berinteraksi melalui batasan-batasan yang jelas. Konsep ini membantu dalam memisahkan logika bisnis dari detail-detail teknis dan infrastruktur sehingga aplikasi dapat menjadi lebih bersih, mudah diuji, dan mudah untuk dikelola.
+
+Berikut ini lapisan-lapisan clean architecture pada aplikasi Flutter:
+
+  1. Lapisan Presentasi (Presentation Layer)
+
+    - Lapisan ini berisi tampilan Flutter seperti widget-widget UI, halaman, dan komponen antarmuka pengguna.
+
+  2. Lapisan Bisnis (Business Logic Layer)
+
+    - Lapisan yang berisi logika bisnis inti dalam aplikasi yang terpisah dari lapisan tampilan. Flutter biasa menggunakan pola desain seperti BLoC (Business Logic Component), Provider, atau Redux untuk mengelola logika bisnis.
+
+  3. Lapisan Data (Data Layer)
+
+    - Lapisan ini berisi implementasi konkrit dari repositori yang berkomunikasi dengan sumber data aktual seperti API REST, SQLite, Firebase, atau data lokal.
+
+  4. Lapisan Eksternal (External Layer)
+
+    - Lapisan ini mencakup pustaka-pustaka Flutter dan paket-paket eksternal yang digunakan dalam aplikasi.
+
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
+
+Jawaban:
+
+Menambahkan drawer menu untuk navigasi
+
+- Buat direktori baru yaitu widgets
+- Buat file baru  dengan nama left_drawer.dart di dalam widgets
+- Tambahkan import untuk navigasi ke halaman MyHomePage dan ShopFormPage
+- Tambahkan kode untuk Routing
+- Tambahkan kode untuk Bagian drawer header
+- Kemudian setelah berhasil membuat drawe menu, masukan ke halaman menu.dart
+
+Menambahkan Form dan Input
+
+- Buat file baru di lib dengan nama shoplist_form.dart
+- Tambahkan kode di dalam file shoplist_form.dart
+- Ubah widget Placeholder dengan potongan kode baru
+- Buat variabel baru bernama _formKey lalu tambahkan _formKey tersebut ke dalam atribut key milik widget Form.
+- Buat beberapa variabel untuk menyimpan input dari masing-masing field yang akan dibuat
+- Buat widget Column sebagai child dari SingleChildScrollView
+- Buat widget TextFormField yang dibungkus oleh Padding untuk "Nama Item"
+- Tambahkan atribut crossAxisAlignment untuk mengatur alignment children dari Column
+- Buat tiga TextFormField yang dibungkus dengan Padding sebagai child selanjutnya dari Column untuk field price, stok, dan description
+- Buat tombol sebagai child selanjutnya dari Column, kemudian bungkus tombol ke dalam widget Padding dan Align
+
+Memunculkan Data
+
+- Tambahkan fungsi showDialog() pada bagian onPressed() dan munculkan widget AlertDialog
+- Tambahkan fungsi untuk reset form
+
+Menambahkan Fitur Navigasi pada Tombol
+
+- Pada menu.dart tambahkan kode di dalam onTap untuk dapat melakukan navigasi ke route lain (tambahkan kode tambahan di bawah kode ScaffoldMessenger yang menampilkan snackbar).
+- Tambahkan navigator.pushreplacment untuk melakukan navigasi ke MaterialPageRoute yang mencakup ShopFormPage
+
+
+- Kemudian lakukan Refactoring File dengan cara membuat satu folder screens. Kemudian di dalamnya direct file menu.dart dan shoplist_form.dart.
+- Buat berkas baru dengan nama shop_card.dart pada direktori widgets
+- Pindahkan isi widget ShopItem pada menu.dart
+- import halaman shoplist_form.dart pada berkas shop_card.dart dan import halaman shop_card.dart pada berkas menu.dart.
+
