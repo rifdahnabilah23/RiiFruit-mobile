@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:riifruit/screens/fruit_item.dart';
 import 'package:riifruit/screens/menu.dart';
 import 'package:riifruit/screens/shoplist_form.dart'; // Impor halaman ShopFormPage
 
@@ -67,6 +68,17 @@ class LeftDrawer extends StatelessWidget {
                 ));
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.view_list),
+            title: const Text('Lihat Item'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProductListPage(productList: productList),
+                ));
+            },
+          )
         ],
       ),
     );

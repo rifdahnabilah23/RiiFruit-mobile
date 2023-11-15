@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:riifruit/screens/shoplist_form.dart';
 import 'package:riifruit/widgets/left_drawer.dart';
 import 'package:riifruit/widgets/shop_card.dart'; //import drawer widget
 

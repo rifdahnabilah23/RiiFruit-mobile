@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:riifruit/screens/fruit_item.dart';
 import 'package:riifruit/screens/shoplist_form.dart';
-import 'package:riifruit/widgets/left_drawer.dart';
-import 'package:riifruit/widgets/shop_card.dart';
+import 'package:riifruit/screens/menu.dart';
+
 
 class ShopItem {
   final String name;
@@ -36,6 +37,14 @@ class ShopCard extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => ShopFormPage(),
+              ));
+          }
+
+          if (item.name == "Lihat Item") {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProductListPage(productList: productList)
               ));
           }
           

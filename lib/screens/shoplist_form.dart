@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:riifruit/widgets/left_drawer.dart';// Impor drawer yang sudah dibuat sebelumnya
+import 'package:riifruit/models/fruit_models.dart';
+import 'package:riifruit/screens/fruit_item.dart';
+
+List<Product> productList = [];
 
 class ShopFormPage extends StatefulWidget {
     const ShopFormPage({super.key});
@@ -13,7 +17,7 @@ class _ShopFormPageState extends State<ShopFormPage> {
     final _formKey = GlobalKey<FormState>();
     String _name = "";
     int _price = 0;
-    int _stok = 0;
+    int _amount= 0;
     String _description = "";
 
     @override
@@ -42,8 +46,8 @@ class _ShopFormPageState extends State<ShopFormPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: TextFormField(
                               decoration: InputDecoration(
-                                hintText: "Nama Produk",
-                                labelText: "Nama Produk",
+                                hintText: "Nama Item",
+                                labelText: "Nama Item",
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(5.0),
                                 ),
@@ -103,7 +107,7 @@ class _ShopFormPageState extends State<ShopFormPage> {
                               ),
                               onChanged: (String? value) {
                                 setState(() {
-                                  _stok = int.parse(value!);
+                                  _amount= int.parse(value!);
                                 });
                               },
                               validator: (String? value) {
@@ -154,6 +158,14 @@ class _ShopFormPageState extends State<ShopFormPage> {
                                 ),
                                 onPressed: () {
                                   if (_formKey.currentState!.validate()) {
+                                      Product newBook = Product(
+                                        name: _name,
+                                        amount: _amount,
+                                        price: _price,
+                                        description: _description,
+                                        );
+                                        productList.add(newBook);
+
                                     //Untuk memunculkan data ke popup
                                     showDialog(
                                       context: context,
@@ -167,7 +179,7 @@ class _ShopFormPageState extends State<ShopFormPage> {
                                               //apa aja yang akan di munculkan di popup
                                               children: [
                                                 Text('Nama Produk: $_name'),
-                                                Text('Stok: $_stok'),
+                                                Text('Stok: $_amount'),
                                                 Text('Harga: $_price'),
                                                 Text('Deskripsi: $_description'),
                                               ],
