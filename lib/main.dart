@@ -1,7 +1,7 @@
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
 import 'package:riifruit/screens/login.dart';
-import 'package:riifruit/screens/menu.dart';
+// import 'package:riifruit/screens/menu.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
                   colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
                   useMaterial3: true,
               ),
-              home: LoginPage(),
+              home: const LoginPage(),
             ),
       );
     // return MaterialApp(

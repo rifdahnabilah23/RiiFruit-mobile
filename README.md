@@ -462,4 +462,23 @@ Jawab:
 6. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
 
 Jawab:
-- 
+
+- Mengecek deployment dari tugas Django
+- Membuat halaman login pada proyek tugas Flutter dengan membuat django-app authentication pada project DJango, menambahkan authentication ke INSTALLED_APPS di main project settings.py, menjalankan pip install django-cors-headers, menambahkan corsheaders ke INSTALLED_APPS, dan menambahkan corsheaders.middleware.CorsMiddleware di settings.py aplikasi
+- Menambah variable pada setting.py
+- Membuat fungsi di views.py authentication dan routing url di authentication dan hana_grosir
+- Menginstall package untuk flutter
+- Menggunakan package dengan memodifikasi root widget untuk menyediakan CookieRequest library ke semua child widgets dengan menggunakan Provider
+- Membuat file login.dart di screens dan mengisinya dengan kode untuk laman login dan mengubah home: LoginPage() di main.dart
+- Membuat model kustom dengan cara membuat endpoint JSON dan menyalin data JSON ke situs web Quicktype
+- Mengubah setup name menjadi `Product`, source type menjadi `JSON`, dan language menjadi Dart pada situs web Quicktype
+- Menerapkan Fetch Data dari Django untuk ditampilkan ke Flutter dengan cara menambahkan package http, menambahkan kode untuk memperbolehkan akses Internet pada aplikasi Flutter yang sedang dibuat di file android/app/src/main/AndroidManifest.xml
+- Melakukan fetch data dari django dengan membuat file list_product.dart di folder `lib/screens`, menambahkan impor library yang dibutuhkan dan kode yang dibutuhkan
+- Menambahkan halaman list_product.dart ke widgets/left_drawer.dart 
+- Mengubah fungsi tombol Lihat Item agar mengarahkan ke halaman ProductPage
+- Impor file yang dibutuhkan dan menambahkan ProductPage ke `left_drawer.dart `dan shop_card.dart
+- Mengintegrasikan form flutter dengan layanan django dengan cara membuat views baru di views.py pada main dengan nama create_product_flutter dan menambahkan routing di urls.py
+- DI flutter kita menghubungkan halaman shoplist_form.dart dengan CookieRequest dan mengubah perintah pada onPressed() button sehingga akan routing ke link django
+- Mengimplementasikan fitur logout dengan menambahkan fungsi di authentication/views.py dan routing di urls.py
+- Di Flutter, menambahkan kode request dan import di `lib/widgets/shop_card.dart`, mengubah perintah onTap pada widget Inkwell menjadi `onTap: () async`, dan menambahkan kode di dalam async
+- Untuk dapat melihat detail per item, kita perlu membuat file baru bernama detail_page.dart yang akan mengurusi semua detail item dan pada list_product.dart, ditambahkan kode untuk membuat nama item dapat di klik dan akan masuk ke detail_page.dart untuk menampilkan detail per item

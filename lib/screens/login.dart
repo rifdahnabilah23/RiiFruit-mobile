@@ -2,10 +2,11 @@ import 'package:riifruit/screens/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
+import 'package:riifruit/screens/register.dart';
 
-void main() {
-    runApp(const LoginApp());
-}
+// void main() {
+//     runApp(const LoginApp());
+// }
 
 class LoginApp extends StatelessWidget {
 const LoginApp({super.key});
@@ -106,6 +107,20 @@ class _LoginPageState extends State<LoginPage> {
                             },
                             child: const Text('Login'),
                         ),
+
+                        //bonus
+
+                        const SizedBox(height: 24.0),
+
+
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => RegistrationPage()),
+                                    );
+                          },
+                          child: const Text("Register"))
                     ],
                 ),
             ),
