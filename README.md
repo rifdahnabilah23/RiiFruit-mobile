@@ -418,3 +418,48 @@ Menambahkan Fitur Navigasi pada Tombol
 - Pindahkan isi widget ShopItem pada menu.dart
 - import halaman shoplist_form.dart pada berkas shop_card.dart dan import halaman shop_card.dart pada berkas menu.dart.
 
+
+
+------------- TUGAS 9 --------------------
+
+1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Jawab:
+
+Ya, kita mampu mengakses data JSON tanpa perlu membuat model terlebih dahulu. Proses pengambilan data JSON melibatkan pembacaan atau konsumsi data yang dikirimkan dalam format JSON. Tindakan ini dapat dilakukan menggunakan bahasa pemrograman yang mendukung manipulasi JSON atau dengan menggunakan perpustakaan khusus yang tersedia dalam berbagai bahasa pemrograman. Sebaliknya, pembuatan model seringkali terkait dengan kebutuhan analisis data yang lebih mendalam, seperti dalam konteks pembelajaran mesin, di mana Anda ingin membuat model berdasarkan data yang telah Anda peroleh.
+
+Apakah lebih baik melakukan pengambilan data JSON tanpa membuat model terlebih dahulu atau tidak tergantung pada kebutuhan dan tujuan. Jika tujuannya hanya untuk mengakses atau menampilkan data JSON yang diterima dari suatu API atau sumber data lainnya, lebih baik tidak membuat model. Jika tujuannya untuk menganalisis data lebih lanjut, memprediksi pola, atau membuat rekomendasi berdasarkan data tersebut, perlu membangun model.
+
+2. Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+
+Jawab:
+CookieRequest bertugas mengelola permintaan request yang terkait dengan cookie dalam suatu aplikasi. Class ini bertanggung jawab atas pengaturan aspek-aspek yang berkaitan dengan data yang disimpan di sisi klien untuk melacak informasi terkait sesi pengguna. Untuk memastikan manajemen cookie dilakukan secara seragam di semua komponen dalam aplikasi, sebuah instance dari CookieRequest perlu dibagikan ke seluruh komponen. Dengan cara ini, keberlanjutan sesi pengguna dapat dijaga dengan konsistensi.
+
+3. Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+
+Jawab:
+- Gunakan package dan library yang diperlukan, contohnya http dan convert.
+- Fetch data menggunakan HTTP untuk meminta data dari server yang memiliki data JSON tersebut.
+- Parsing atau convert response tersebut ke dalam bentuk JSON.
+- Menampilkan data di flutter contohnya menggunakan ListView.builder
+
+4. Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+
+Jawab:
+- Mulai dengan menggunakan paket pbp_django_auth, buatlah sebuah CookieRequest baru dan masukkan ke dalam variabel yang dinamai request.
+- Di dalam login.dart, aplikasi akan meminta masukan teks berupa nama pengguna (username) dan kata sandi (password). Ketika formulir tersebut dikirimkan (submitted), akan melakukan pemanggilan fungsi, di mana username dan password tersebut akan dikirimkan sebagai permintaan (request) ke proyek Django untuk proses otentikasi dan login pengguna. Jika berhasil, akan menghasilkan JsonResponse yang menyatakan keberhasilan, dan sebaliknya jika gagal.
+
+5. Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+
+Jawab:
+- TextField: Berfungsi sebagai input teks dari pengguna. Dalam konteks tugas ini, digunakan untuk menerima username dan password selama proses login dan registrasi.
+- SizedBox: Menciptakan suatu ruang yang ditentukan. Dalam tugas ini, berperan sebagai elemen untuk memberikan jarak atau pemisah antara TextField username dan password.
+- ElevatedButton: Membuat tombol dengan efek elevasi saat ditekan. Dalam tugas ini, digunakan sebagai tombol untuk mengirimkan data saat proses login dan registrasi.
+- TextButton: Membuat tombol berupa teks tanpa latar belakang. Dalam konteks tugas, diterapkan pada tombol registrasi.
+- ListView.builder: Membuat daftar item yang dapat di-scroll. Digunakan untuk menampilkan daftar item yang ada dalam tugas ini.
+- Text: Berperan dalam pembuatan elemen teks. Pada tugas ini, dimanfaatkan untuk menampilkan detail teks ketika suatu item pada daftar item ditekan.
+
+6. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+
+Jawab:
+- 

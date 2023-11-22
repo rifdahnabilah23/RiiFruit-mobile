@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:riifruit/screens/fruit_item.dart';
+import 'package:riifruit/screens/list_product.dart';
 import 'package:riifruit/screens/menu.dart';
 import 'package:riifruit/screens/shoplist_form.dart'; // Impor halaman ShopFormPage
 
@@ -68,17 +69,31 @@ class LeftDrawer extends StatelessWidget {
                 ));
             },
           ),
+          
+          // ListTile(
+          //   leading: const Icon(Icons.view_list),
+          //   title: const Text('Lihat Item'),
+          //   onTap: () {
+          //     Navigator.pushReplacement(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) => ProductListPage(productList: productList),
+          //       ));
+          //   },
+          // ),
+
           ListTile(
-            leading: const Icon(Icons.view_list),
-            title: const Text('Lihat Item'),
+            leading: const Icon(Icons.shopping_basket),
+            title: const Text('Daftar Produk'),
             onTap: () {
-              Navigator.pushReplacement(
+                // Route menu ke halaman produk
+                Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => ProductListPage(productList: productList),
-                ));
+                MaterialPageRoute(builder: (context) => const ProductPage()),
+                );
             },
-          )
+          ),
+
         ],
       ),
     );
